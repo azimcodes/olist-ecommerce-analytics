@@ -23,8 +23,9 @@ CREATE TABLE Staging_Customers (
     customer_state VARCHAR(100)
 )
 
+-- Replace YOUR_DATASET_PATH with the folder containing the downloaded Olist CSV files.
 BULK INSERT Staging_Customers
-FROM 'D:\Olist Dataset\olist_customers_dataset.csv'
+FROM 'YOUR_DATASET_PATH\olist_customers_dataset.csv'
 WITH (
     FORMAT = 'CSV',
     FIRSTROW = 2,
